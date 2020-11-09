@@ -98,7 +98,6 @@
     "dateformat": "^3.0.3",
     "ejs": "^3.0.2",
     "escape-string-regexp": "^3.0.0",
-    "eslint": "file:.",
     "eslint-config-eslint": "file:packages/eslint-config-eslint",
     "eslint-plugin-eslint-plugin": "^2.2.1",
     "eslint-plugin-internal-rules": "file:tools/internal-rules",
