@@ -58,7 +58,7 @@ describe("eslint-fuzzer", function() {
                 assert.strictEqual(results[0].type, "crash");
                 assert.strictEqual(results[0].text, "foo");
                 assert.deepStrictEqual(results[0].config.rules, { "test-fuzzer-rule": 2 });
-                assert.strictEqual(results[0].error, CRASH_BUG.stack);
+                assert.include(results[0].error, `${CRASH_BUG.message}. Rule: "test-fuzzer-rule"`);
             });
         });
 
@@ -97,7 +97,7 @@ describe("eslint-fuzzer", function() {
                 assert.strictEqual(results[0].type, "crash");
                 assert.strictEqual(results[0].text, "foo");
                 assert.deepStrictEqual(results[0].config.rules, { "test-fuzzer-rule": 2 });
-                assert.strictEqual(results[0].error, CRASH_BUG.stack);
+                assert.include(results[0].error, `${CRASH_BUG.message}. Rule: "test-fuzzer-rule"`);
             });
         });
 
@@ -251,7 +251,7 @@ describe("eslint-fuzzer", function() {
 
                 assert.strictEqual(results[0].text, `bar ${disableFixableRulesComment}`);
                 assert.deepStrictEqual(results[0].config.rules, { "test-fuzzer-rule": 2 });
-                assert.strictEqual(results[0].error, CRASH_BUG.stack);
+                assert.include(results[0].error, `${CRASH_BUG.message}. Rule: "test-fuzzer-rule"`);
             });
         });
     });

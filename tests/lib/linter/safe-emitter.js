@@ -8,6 +8,8 @@
 const createEmitter = require("../../../lib/linter/safe-emitter");
 const assert = require("chai").assert;
 
+// TODO add tests
+
 describe("safe-emitter", () => {
     describe("emit() and on()", () => {
         it("allows listeners to be registered calls them when emitted", () => {

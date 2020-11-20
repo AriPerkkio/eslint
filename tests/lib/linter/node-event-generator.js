@@ -28,6 +28,8 @@ const ESPREE_CONFIG = {
     loc: true
 };
 
+// TODO add tests
+
 describe("NodeEventGenerator", () => {
     EventGeneratorTester.testEventGeneratorInterface(
         new NodeEventGenerator(createEmitter())
